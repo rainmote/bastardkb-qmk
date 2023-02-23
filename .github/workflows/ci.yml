@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+  workflow_dispatch:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    container: qmkfm/qmk_cli
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+
+    - name: Verify Vial UID is unique
+      run: python3 util/ci_vial_verify_uid.py
+
+    - name: Compile Vial keyboards
+      run: |
+        make git-submodule
+        make bastardkb/charybdis/4x6:vial
+        make bastardkb/scylla:vial
