@@ -18,6 +18,5 @@ jobs:
 
     - name: Compile Vial keyboards
       run: |
-        make git-submodule
         make bastardkb/charybdis/4x6:vial
         make bastardkb/scylla:vial
