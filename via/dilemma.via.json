@@ -2,7 +2,6 @@
   "name": "Dilemma",
   "vendorId": "0xA8F8",
   "productId": "0x1835",
-  "lighting": "none",
   "matrix": { "rows": 8, "cols": 5 },
   "customKeycodes": [
     {
