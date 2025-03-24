@@ -18,7 +18,8 @@
 #pragma once
 
 /* Handedness. */
-#define MASTER_RIGHT
+// #define MASTER_RIGHT
+#define MASTER_LEFT
 
 // To use the handedness pin, resistors need to be installed on the adapter PCB.
 // If so, uncomment the following code, and undefine MASTER_RIGHT above.
